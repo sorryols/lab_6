@@ -9,13 +9,12 @@ on:
       - master
 
 jobs:
-  run-tests:
-    name: Test
+  drive:
     runs-on: windows-latest
 
     steps:
       - name: Checkout code
-        uses: actions/chekout@v1
+        uses: actions/chekout@v3
 
       - name: Set up Python
         uses: action/setup-python@v4
