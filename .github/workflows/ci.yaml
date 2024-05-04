@@ -10,24 +10,8 @@ on:
 
 jobs:
   run-tests:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [windows-latest]
-        python-varsion:
-          - "3.7"
-          - "3.8"
-          - "3.9"
-          - "3.10"
-          - "3.11"
-          - "3.12"
-          - "3.12-dev"
-          - "pypy-3.7"
-          - "pypy-3.8"
-          - "pypy-3.9"
-
     name: Test
-    runs-on: ${{ matrix.os }}
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
